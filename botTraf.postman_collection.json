@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "b812eeac-e6e8-47e6-9273-9950916585c6",
+		"name": "botTraf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13349022"
+	},
+	"item": [
+		{
+			"name": "bot",
+			"item": [
+				{
+					"name": "Lanzar bot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name_model\" : \"karoline_miller7\",\r\n    \"name_monitor\" : \"monitor1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{botTraf}}/bot",
+							"host": [
+								"{{botTraf}}"
+							],
+							"path": [
+								"bot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "kill bots",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{botTraf}}/bot/killbot",
+							"host": [
+								"{{botTraf}}"
+							],
+							"path": [
+								"bot",
+								"killbot"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bot any",
+			"item": [
+				{
+					"name": "Lanzar bot any",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lTW9kZWwiOiIxMjM0NSIsInVzZXJJZCI6IjYyZDgzYzc3ZjM2NjI1NDJhNjlhMjg3NiIsImhlYWRxdWFydGVyIjoiNjJkODNjM2ZmMzY2MjU0MmE2OWEyODY4IiwiY29tcGFueSI6IjYyZDgzYzEyZjM2NjI1NDJhNjlhMjgxZiIsIm5Cb3RzIjoiMSIsImlhdCI6MTY1ODQyNzU5NH0.jaoE2tCinF8Y2xGNJF8R3m19BvviZ2qodiVsW_hD-_M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{botTraf}}/bot/getBotAny",
+							"host": [
+								"{{botTraf}}"
+							],
+							"path": [
+								"bot",
+								"getBotAny"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "kill bots any",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{botTraf}}/bot/killBotAny",
+							"host": [
+								"{{botTraf}}"
+							],
+							"path": [
+								"bot",
+								"killBotAny"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bot mixed",
+			"item": [
+				{
+					"name": "launch bots mixed",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lTW9kZWwiOiJtaWRuaWdodF9qb3lfIiwidXNlcklkIjoiNjJkODNjNzdmMzY2MjU0MmE2OWEyODc2IiwiaGVhZHF1YXJ0ZXIiOiI2MmQ4M2MzZmYzNjYyNTQyYTY5YTI4NjgiLCJjb21wYW55IjoiNjJkODNjMTJmMzY2MjU0MmE2OWEyODFmIiwibkJvdHMiOiIxMCIsImlhdCI6MTY1ODg2MDY3M30.XhFNCbrjYr7NJRVK91NIxIafVRJ0hxsYThh-pJMRaKs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{botTraf}}/bot/getBotMixed",
+							"host": [
+								"{{botTraf}}"
+							],
+							"path": [
+								"bot",
+								"getBotMixed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reset",
+			"item": [
+				{
+					"name": "reset bot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{botTraf}}/storage/reset",
+							"host": [
+								"{{botTraf}}"
+							],
+							"path": [
+								"storage",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "save proxys",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "myfile",
+							"type": "file",
+							"src": "/F:/dataNEcesaria/proxy.txt"
+						},
+						{
+							"key": "headquarter_id",
+							"value": "62621fb4c7707bb48bd30903",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{botTraf}}/storage/proxys",
+					"host": [
+						"{{botTraf}}"
+					],
+					"path": [
+						"storage",
+						"proxys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save accts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "myfile",
+							"type": "file",
+							"src": "/F:/dataNEcesaria/accounts.txt"
+						},
+						{
+							"key": "headquarter_id",
+							"value": "62621fb4c7707bb48bd30903",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{botTraf}}/storage/accts",
+					"host": [
+						"{{botTraf}}"
+					],
+					"path": [
+						"storage",
+						"accts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save models",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name_model\" : \"camila_fiore\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{botTraf}}/storage/model",
+					"host": [
+						"{{botTraf}}"
+					],
+					"path": [
+						"storage",
+						"model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save headquarter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"sedeUno\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{botTraf}}/storage/headquarter",
+					"host": [
+						"{{botTraf}}"
+					],
+					"path": [
+						"storage",
+						"headquarter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save monitor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"monitor1\",\r\n    \"name\": \"mon1\",\r\n    \"password\": \"12345678\",\r\n    \"headquarter_id\": \"62621fb4c7707bb48bd30903\",\r\n    \"address\": \"calle1\",\r\n    \"number\": \"1234567890\",\r\n    \"Shift\": \"noche\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{botTraf}}/storage/monitor",
+					"host": [
+						"{{botTraf}}"
+					],
+					"path": [
+						"storage",
+						"monitor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear cuentas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"headquarter_id\": \"62602931817f483d48b11a5b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{botTraf}}/accounts/accoutsbot",
+					"host": [
+						"{{botTraf}}"
+					],
+					"path": [
+						"accounts",
+						"accoutsbot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generar nombres",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"headquarter_id\": \"62602931817f483d48b11a5b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{botTraf}}/accounts/generateName",
+					"host": [
+						"{{botTraf}}"
+					],
+					"path": [
+						"accounts",
+						"generateName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cambiar estado cuentas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"headquarter_id\": \"62602931817f483d48b11a5b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{botTraf}}/accounts/isFullFalse",
+					"host": [
+						"{{botTraf}}"
+					],
+					"path": [
+						"accounts",
+						"isFullFalse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get accts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{botTraf}}/storage/getaccts",
+					"host": [
+						"{{botTraf}}"
+					],
+					"path": [
+						"storage",
+						"getaccts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
